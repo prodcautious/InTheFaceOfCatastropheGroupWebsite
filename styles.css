@@ -1,0 +1,65 @@
+/* CSS for header, footer, and body */
+
+body {
+    background-color: #f3e6e0; /* Light peach background */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #ffffff; /* White background */
+    color: #bfdcc2; /* Same green used for the footer */
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertically center items */
+}
+
+.logo {
+    text-align: left; /* Left align the logo text */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.2em; /* Adjust size if needed */
+}
+
+header h2 {
+    margin: 5px 0 0 0; /* Space above the second line */
+    font-size: 1.0em; /* Adjust size if needed */
+}
+
+nav {
+    text-align: right; /* Align links to the right */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 10px 0 0 0; /* Space above links */
+}
+
+nav ul li {
+    display: inline; /* Align links in a row */
+    margin-left: 20px; /* Space between links */
+}
+
+nav ul li a {
+    color: #333333; /* Black text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.logo a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from parent (header) */
+}
+
+
+footer {
+    background-color: #bfdcc2; /* Light green color */
+    color: #333333; /* Dark text for contrast */
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
