@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'ProFaFont';
+    src: url('../fonts/pro-fa-brands-400-0.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProFaFont';
+    src: url('../fonts/pro-fa-brands-700-0.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #f3e6e0;
+    margin: 0;
+    font-family: 'ProFaFont', sans-serif;
+}
+
+h1, p {
+    font-family: 'ProFaFont', sans-serif;
+}
+
+.header-and-paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 150px;
+    box-sizing: border-box;
+}
+
+.header-and-paragraph p {
+    flex: 1;
+    margin-right: 60px;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.book-image {
+    max-width: 40%;
+    padding-right: 25px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+header {
+    background-color: #ffffff;
+    color: #bfdcc2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-align: left;
+}
+
+header h1, header h2 {
+    margin: 0;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header h2 {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-family: 'ProFaFont', sans-serif;
+    font-weight: 300;
+    font-size: 1.0em;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-family: 'ProFaFont', sans-serif;
+    font-weight: 300;
+    font-size: 1.0em;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #bfdcc2;
+    color: #333333;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 20px; /* Optional: adds space between the images */
+}
+
+.gallery-image {
+    width: 255px;
+    height: 255px;
+    object-fit: contain; /* Makes sure the entire image fits within 255x255 without distortion */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
+}
