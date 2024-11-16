@@ -14,46 +14,35 @@
     font-display: swap;
 }
 
-body {
-    background-color: #f3e6e0;
-    margin: 0;
-    font-family: 'ProFaFont', sans-serif;
-}
-
-h1, p {
-    font-family: 'ProFaFont', sans-serif;
-}
-
-.header-and-paragraph {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 100%;
-    margin: 0;
-    padding-left: 150px;
+* {
     box-sizing: border-box;
 }
 
-.header-and-paragraph p {
-    flex: 1;
-    margin-right: 60px;
-    font-weight: 300;
-    font-size: 1.2em;
-    line-height: 1.6em;
+html, body {
+    height: 100%; /* Ensure the body and html elements take up full height of the viewport */
+    margin: 0;
 }
 
-.book-image {
-    max-width: 40%;
-    padding-right: 25px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
+body {
+    background-color: #f3e6e0;
+    display: flex; /* Set body as a flex container */
+    flex-direction: column; /* Stack header, content, and footer vertically */
+    font-family: 'ProFaFont', sans-serif;
+}
+
+main {
+    flex-grow: 1; /* Ensures content area takes up remaining space */
+}
+
+header, footer {
+    width: 100%; /* Ensure full width */
+    padding: 20px; /* Consistent padding */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 header {
     background-color: #ffffff;
     color: #bfdcc2;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,8 +102,33 @@ nav ul li a {
 footer {
     background-color: #bfdcc2;
     color: #333333;
-    padding: 20px;
-    text-align: center;
     font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
+.header-and-paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 10%; /* Updated padding for responsiveness */
+    box-sizing: border-box;
+}
+
+.header-and-paragraph p {
+    flex: 1;
+    margin-right: 60px;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.book-image {
+    max-width: 40%;
+    padding-right: 25px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
 }
