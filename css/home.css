@@ -1,17 +1,8 @@
 /* Font for Headers and Footers */
 @font-face {
     font-family: 'Adobe Caslon Pro Regular';
-    src: url('../fonts/ACaslonPro-Regular.woff2') format('woff2'),
+    src: url('../fonts/ACaslonPro-Regular.otf') format('otf'),
          url('../fonts/ACaslonPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Font Face For Body */
-@font-face {
-    font-family: 'FaFont';
-    src: url('../fonts/ACaslonPro-Regular.otf') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -24,7 +15,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'FaFont', sans-serif;
+    font-family: 'Adobe Caslon Pro Regular', serif !important;
 }
 
 body {
@@ -33,7 +24,6 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-
 
 .opaque-image {
     position: fixed;
@@ -48,8 +38,6 @@ body {
     z-index: -1;
 }
 
-
-
 main {
     flex-grow: 1;
     display: flex;
@@ -63,7 +51,7 @@ header, footer {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    font-family: 'Adobe Caslon Pro Regular'
+    font-family: 'Adobe Caslon Pro Regular';
 }
 
 header {
@@ -75,6 +63,7 @@ header {
 }
 
 header h1, header h2 {
+    font-family: 'Adobe Caslon Pro Regular', serif !important;
     margin: 0;
     text-align: left;
 }
@@ -97,23 +86,33 @@ nav ul {
     list-style-type: none;
     margin: 10px 0 0 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
+    align-items: center;
     margin-left: 20px;
 }
 
 nav ul li a {
     color: #333333;
     text-decoration: none;
+    display: flex;
+    align-items: center;
     position: relative;
 }
 
-nav ul li a::after {
+nav ul li a span {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:not(:has(img))::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -124,10 +123,19 @@ nav ul li a::after {
     opacity: 0;
 }
 
-nav ul li a:hover::after {
+nav ul li a:not(:has(img)):hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
     opacity: 1; 
+}
+
+nav ul li a img {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+nav ul li a img:hover {
+    text-decoration: none;
 }
 
 .logo a {
@@ -175,10 +183,10 @@ footer {
 }
 
 .cta-button {
-    font-family: 'FaFont';
+    font-family: 'Adobe Caslon Pro Regular';
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #fff;
     background-color: #cb8888;
     text-decoration: none;
@@ -196,7 +204,7 @@ footer {
     position: absolute;
     left: 82%;
     transform: translateX(-50%);
-    top: calc(100% - 50px);
+    top: calc(100% - 125px);
     width: auto;
 }
 
@@ -205,7 +213,7 @@ footer {
 }
 
 .newsletter-signup h3 {
-    font-size: 1.4em;
+    font-size: 2em;
     margin-bottom: 10px;
     color: #333333;
 }

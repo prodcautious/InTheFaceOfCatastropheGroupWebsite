@@ -1,47 +1,38 @@
 /* Font for Headers and Footers */
 @font-face {
     font-family: 'Adobe Caslon Pro Regular';
-    src: url('../fonts/ACaslonPro-Regular.woff2') format('woff2'),
+    src: url('../fonts/ACaslonPro-Regular.otf') format('otf'),
          url('../fonts/ACaslonPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-/* Font Face For Body */
-@font-face {
-    font-family: 'FaFont';
-    src: url('../fonts/ACaslonPro-Regular.otf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 * {
-    box-sizing: border-box; /* Apply universally */
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'FaFont', sans-serif; /* Apply FaFont globally */
+    font-family: 'Adobe Caslon Pro Regular', sans-serif;
 }
 
 body {
     background-color: #f3e6e0;
-    display: flex; /* Set body as a flex container */
-    flex-direction: column; /* Stack header, content, and footer vertically */
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    flex-grow: 1; /* Ensure content area takes up remaining space */
+    flex-grow: 1;
     padding: 20px;
 }
 
 header, footer {
     width: 100%;
     padding: 20px;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box;
     font-family: 'Adobe Caslon Pro Regular';
 }
 
@@ -76,15 +67,55 @@ nav ul {
     list-style-type: none;
     margin: 10px 0 0 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
+    align-items: center;
     margin-left: 20px;
 }
 
 nav ul li a {
     color: #333333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li a span {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:not(:has(img))::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+nav ul li a:not(:has(img)):hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1; 
+}
+
+nav ul li a img {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+nav ul li a img:hover {
     text-decoration: none;
 }
 
@@ -134,8 +165,8 @@ main p {
 
 .cta-button-container {
     position: absolute;
-    left: 82%; /* Position it at 60% of the container width */
-    transform: translateX(-50%); /* Center it precisely */
+    left: 82%;
+    transform: translateX(-50%);
     top: calc(100% - 50px);
     width: auto;
 }
@@ -173,7 +204,6 @@ main p {
     cursor: pointer;
 }
 
-/* Simple Contact Form Styles */
 .contact-form {
     max-width: 600px;
     margin: 20px auto;
@@ -191,7 +221,7 @@ main p {
 }
 
 .contact-form label {
-    font-size: 1.1em; /* Font size consistent with form labels in other parts */
+    font-size: 1.1em;
     color: #333333;
     display: block;
     margin-bottom: 5px;
@@ -202,7 +232,7 @@ main p {
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    font-size: 1em; /* Font size consistent with text input fields */
+    font-size: 1em;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -216,7 +246,7 @@ main p {
 
 .contact-form button {
     padding: 10px 20px;
-    font-size: 1.2em; /* Same font size as buttons on home page */
+    font-size: 1.2em;
     color: #fff;
     background-color: #cb8888;
     border: none;
@@ -227,7 +257,7 @@ main p {
 }
 
 .contact-form button:hover {
-    background-color: #b77b7b; /* Consistent hover effect */
+    background-color: #b77b7b;
 }
 
 .newsletter-signup {
@@ -235,7 +265,7 @@ main p {
 }
 
 .newsletter-signup h3 {
-    font-size: 1.4em;
+    font-size: 2em;
     margin-bottom: 10px;
     color: #333333;
 }
@@ -259,13 +289,15 @@ main p {
 }
 
 .newsletter-signup button {
-    padding: 10px 20px;
+    font-family: 'FaFont', sans-serif;
     font-size: 1em;
+    padding: 10px 20px;
     color: #fff;
     background-color: #cb8888;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .newsletter-signup button:hover {
