@@ -1,0 +1,224 @@
+/* Font for Headers and Footers */
+@font-face {
+    font-family: 'Adobe Caslon Pro Regular';
+    src: url('../fonts/ACaslonPro-Regular.otf') format('otf'),
+         url('../fonts/ACaslonPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Adobe Caslon Pro Regular', serif !important;
+}
+
+body {
+    background-color: #f3e6e0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.caryn, .jennifer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.amanda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.amanda-img {
+    width: 15%;
+    height: auto;
+}
+
+.amanda-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 50%;
+}
+
+header, footer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Adobe Caslon Pro Regular';
+}
+
+header {
+    background-color: #ffffff;
+    color: #bfdcc2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    text-align: right;
+    font-size: 1.25em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li a span {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:not(:has(img))::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+nav ul li a:not(:has(img)):hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1; 
+}
+
+nav ul li a img {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+nav ul li a img:hover {
+    text-decoration: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #bfdcc2;
+    color: #333333;
+    font-size: 1em;
+    text-align: center;
+    margin-top: auto;
+}
+
+.header-and-paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 10%;
+    position: relative;
+}
+
+.header-and-paragraph p {
+    flex: 1;
+    margin-right: 60px;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.header-and-paragraph > div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.newsletter-signup {
+    margin-top: 20px;
+}
+
+.newsletter-signup h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.newsletter-signup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.newsletter-signup button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #cb8888;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter-signup button:hover {
+    background-color: #b77b7b;
+}

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Authors - In the Face of Catastrophe</title>
         <link rel="icon" type="image/png" href="Images/book/Goldman&Hirshleifer_cover_3D.png">
-        <link rel="stylesheet" href="css/theauthors.css">
+        <link rel="stylesheet" href="css/authors.css">
     </head>
 <body>
     <header>
@@ -20,17 +20,83 @@
                 <li><a href="praise.html">Praise</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.instagram.com/jenniferrosegoldman/" target="_blank">
+                    <img src="Images/logos/insta-logo.png" alt="" width="32" height="32" /></a>
+                </li>
+                <li><a href="https://www.youtube.com/@jenniferrosegoldman" target="_blank">
+                    <img src="Images/logos/youtube-logo.png" alt="" width="32" height="32" /></a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>About the Authors</h1>
-        <p></p>
+
+        <div class="together">
+            <h2>Caryn Meg Hirshleifer & Jennifer Rose Goldman</h2>
+            <img src="/images/pictures/Hirshleifer-Goldman-AU-photo-hz.jpg" alt="Caryn Meg Hirshleifer & Jennifer Rose Goldman"/>
+            <p>Placeholder Text</p>     <!--Replace with actual description-->
+        </div>
+
+        <div class="authors">
+
+            <div class="caryn">
+                <h3>Caryn Meg Hirshleifer</h3>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg"/>     <!--Replace with actual img-->
+                <p>Caryn Meg Hirshleifer is a co-owner of Hirshleifers, a highly successful fifth-generation luxury retail business located in Manhasset, New York, 
+                    where she serves as general counsel as well as in the self-described roles of store historian, store philosopher, and staff nurturer. 
+                    Before that, she worked as an attorney in New York City government, including her time as general counsel to the New York City Fire Department and,
+                     before that, as general counsel to Mayor Koch’s Office of Homelessness. When not at work, Caryn is reading, writing, or practicing riffs on her electric Fender Mustang bass guitar.
+                </p>
+                <p>
+                    Caryn also sits on the Board of the Long Island Council on Alcoholism and Drug Dependence
+                </p>
+            </div>
+    
+            <div class="jennifer">
+                <h3>Jennifer Rose Goldman</h3>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg"/>     <!--Replace with actual img-->
+                <p>
+                    Before her stroke, Jennifer Rose Goldman, a 2013 graduate of Skidmore College with a joint degree in religion and philosophy, founded and served as CEO of Essential Rose, 
+                    an aromatherapy beauty brand that she started in her college dormitory room. Essential Rose packaged and sold teas and skin-care products for inner, rather than outer, beauty. 
+                    A motivational speaker on wellness and self-care, she created her own content and taught a six-week course called “Lead Your Life.” Jenn is passionate about all things spiritual and loves discovering any new modalities she can immerse herself in.
+                </p>
+            </div>
+
+        </div>
+
+        <br/>
+        <h2>Illustrations by Amanda Gwen Goldman</h2>
+
+        <div class="amanda">
+            <img class="amanda-img" src="/images/pictures/Amanda-Gwen-Goldman-min.webp"/>
+            <div class="amanda-text">
+                <h3>Amanda Gwen Goldman</h3>
+                <p>
+                    Amanda Gwen Goldman, younger sister of Jenn and daughter of Caryn, has a passion for mixing colors and integrating textural elements into her drawings. 
+                    The book illustrations are complex and gritty and speak to the dialectic between the beauty and lightness of her color presentation as contrasted with the 
+                    rugged texture reflecting the heaviness under which the illustrations were conceived.
+                </p>
+                <p>
+                    Amanda also loves the artistry of fashion and is dedicated to finding justice and would ultimately like to help falsely incarcerated prisoners.
+                </p>
+            </div>
+        </div>
+
     </main>
 
     <footer>
-        START READING NOW
+        <div class="newsletter-signup">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="subscribe-form">
+                <input id="email-input" type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="form-message"></p>                       
+        </div>
     </footer>
+
+    <script src="newsletter.js"></script>
 </body>
 </html>
