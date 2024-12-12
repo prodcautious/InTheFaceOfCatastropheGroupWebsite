@@ -7,6 +7,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* Font Face For Body */
 @font-face {
     font-family: 'FaFont';
@@ -34,13 +35,14 @@ body {
 
 main {
     flex-grow: 1; /* Ensure content area takes up remaining space */
+    padding: 20px;
 }
 
 header, footer {
     width: 100%;
     padding: 20px;
     box-sizing: border-box; /* Include padding in width calculation */
-    font-family: 'Adobe Caslon Pro Regular'
+    font-family: 'Adobe Caslon Pro Regular';
 }
 
 header {
@@ -99,41 +101,48 @@ footer {
     margin-top: auto;
 }
 
-.header-and-paragraph {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 100%;
-    margin: 0;
-    padding-left: 10%;
-    position: relative;
-}
-
-.header-and-paragraph p {
-    flex: 1;
-    margin-right: 60px;
-    font-weight: 300;
-    font-size: 1.2em;
-    line-height: 1.6em;
-}
-
-.header-and-paragraph > div {
+main h1 {
+    font-size: 2em;
     text-align: center;
-    margin-top: 20px;
+    color: #333333;
 }
 
-.book-image {
-    max-width: 40%;
-    padding-right: 25px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
+main p {
+    font-size: 1.2em;
+    color: #333333;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+.cta-button {
+    font-family: 'FaFont';
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #cb8888;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b77b7b;
+}
+
+.cta-button-container {
+    position: absolute;
+    left: 82%; /* Position it at 60% of the container width */
+    transform: translateX(-50%); /* Center it precisely */
+    top: calc(100% - 50px);
+    width: auto;
 }
 
 .calendar-container {
     text-align: center;
     margin: 20px auto;
-    font-family: ;
 }
 
 .calendar {
@@ -164,30 +173,61 @@ footer {
     cursor: pointer;
 }
 
-.cta-button {
-    font-family: 'FaFont';
-    display: inline-block;
+/* Simple Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1.1em; /* Font size consistent with form labels in other parts */
+    color: #333333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em; /* Font size consistent with text input fields */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2em; /* Same font size as buttons on home page */
     color: #fff;
     background-color: #cb8888;
-    text-decoration: none;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #b77b7b;
-}
-
-.cta-button-container {
-    position: absolute;
-    left: 82%; /* Position it at 60% of the container width */
-    transform: translateX(-50%); /* Center it precisely */
-    top: calc(100% - 50px);
-    width: auto;
+.contact-form button:hover {
+    background-color: #b77b7b; /* Consistent hover effect */
 }
 
 .newsletter-signup {
