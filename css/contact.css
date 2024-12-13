@@ -15,7 +15,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Adobe Caslon Pro Regular', sans-serif;
+    font-family: 'Adobe Caslon Pro Regular', sans-serif !important;
 }
 
 body {
@@ -187,7 +187,9 @@ main p {
 .calendar-container {
     text-align: center;
     margin: 20px auto;
+    margin-bottom: 80px;
 }
+
 
 .calendar {
     border-collapse: collapse;
@@ -329,3 +331,30 @@ main p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.calendar-navigation {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+#month-display {
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+button {
+    background-color: #cb8888;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: #b77b7b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
