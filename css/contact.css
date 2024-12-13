@@ -272,16 +272,16 @@ main p {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: auto; /* Adjust button width to fit content */
-    max-width: 100%; /* Prevent it from exceeding container width */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Keep smooth transition */
+    width: auto;
+    max-width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
 }
 
 .contact-form button:hover {
     background-color: #b77b7b;
     transform: scale(1.05);
-    transform-origin: center; /* Ensure it scales from the center */
+    transform-origin: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -309,7 +309,7 @@ main p {
     padding: 10px;
     font-size: 1em;
     border-radius: 4px;
-    width: 200px;  /* Match button width to input field width */
+    width: 200px;
     max-width: 100%;
 }
 
