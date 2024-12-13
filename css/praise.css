@@ -33,6 +33,28 @@ main {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 30px;
+    margin-left: 160px;
+    margin-right: 300px
+}
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 100%;
+}
+
 header, footer {
     width: 100%;
     padding: 20px;
