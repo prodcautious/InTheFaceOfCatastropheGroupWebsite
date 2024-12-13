@@ -6,13 +6,14 @@
         <title>Home - In the Face of Catastrophe</title>
         <link rel="icon" type="image/png" href="Images/book/Goldman&Hirshleifer_cover_3D.png">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/calendar.css">
     </head>
 <body>
     <div class="opaque-image"></div>
     <header>
         <div class="logo">
             <a href="home.html">
-                <img src="Images/logos/Goldman-Hirshleifer_logo.png" width="300" heigh=auto>
+                <img src="Images/logos/Goldman-Hirshleifer_logo.png" width="300" height="auto">
             </a>
         </div>
         <nav>
@@ -22,10 +23,10 @@
                 <li><a href="research.html"><span>Research</span></a></li>
                 <li><a href="contact.html"><span>Contact</span></a></li>
                 <li><a href="https://www.instagram.com/jenniferrosegoldman/" target="_blank">
-                    <img src="Images/logos/insta-logo.png" alt="" width="32" height="32" /></a>
+                    <img src="Images/logos/insta-logo.png" alt="" width="32" height="32"></a>
                 </li>
                 <li><a href="https://www.youtube.com/@jenniferrosegoldman" target="_blank">
-                    <img src="Images/logos/youtube-logo.png" alt="" width="32" height="32" /></a>
+                    <img src="Images/logos/youtube-logo.png" alt="" width="32" height="32"></a>
                 </li>
             </ul>
         </nav>   
@@ -33,7 +34,6 @@
 
     <main>
         <h1>Contact Us!</h1>
-        <p></p>
         <form class="contact-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
@@ -46,11 +46,10 @@
             
             <button type="submit" class="cta-button">Send Message</button>
         </form>
-        
     </main>
+
     <center><h2>Upcoming Events</h2></center>
     <div class="calendar-navigation">
-        
         <button id="prev-month">Prev</button>
         <h2 id="month-display">December 2024</h2>
         <button id="next-month">Next</button>
@@ -69,54 +68,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                </tr>
-                <tr>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <!-- Populated by JavaScript -->
             </tbody>
         </table>
-    </div>    
+    </div>
+
     <footer>
         <div class="newsletter-signup">
             <h3>Subscribe to Our Newsletter</h3>
@@ -126,13 +82,16 @@
             </form>
             <p id="form-message"></p>                       
         </div>
-    </footer>    
+    </footer>
 
     <script src="newsletter.js"></script>
-
     <script>
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         let currentDate = new Date();
+        const events = {
+            "2024-12-25": [{ time: "5:00 PM", description: "Christmas Day Celebration" }, { time: "7:00 PM", description: "Family Dinner" }],
+            "2024-12-31": [{ time: "9:00 PM", description: "New Year's Eve Party" }]
+        };
 
         function renderCalendar() {
             const monthDisplay = document.getElementById("month-display");
@@ -157,7 +116,32 @@
 
             for (let i = firstDay; i < 7; i++) {
                 const cell = document.createElement("td");
+                const dateKey = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(dayCounter).padStart(2, '0')}`;
                 cell.textContent = dayCounter++;
+
+                if (events[dateKey]) {
+                    const eventDot = document.createElement("div");
+                    eventDot.classList.add("event-dot");
+                    cell.appendChild(eventDot);
+
+                    const tooltip = document.createElement("div");
+                    tooltip.classList.add("tooltip");
+                    events[dateKey].forEach(event => {
+                        const eventInfo = document.createElement("div");
+                        eventInfo.textContent = `${event.time}: ${event.description}`;
+                        tooltip.appendChild(eventInfo);
+                    });
+
+                    cell.appendChild(tooltip);
+
+                    cell.addEventListener("mouseover", () => {
+                        tooltip.style.display = "block";
+                    });
+                    cell.addEventListener("mouseout", () => {
+                        tooltip.style.display = "none";
+                    });
+                }
+
                 row.appendChild(cell);
             }
 
@@ -168,7 +152,32 @@
                 for (let i = 0; i < 7; i++) {
                     if (dayCounter > totalDaysInMonth) break;
                     const cell = document.createElement("td");
+                    const dateKey = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(dayCounter).padStart(2, '0')}`;
                     cell.textContent = dayCounter++;
+
+                    if (events[dateKey]) {
+                        const eventDot = document.createElement("div");
+                        eventDot.classList.add("event-dot");
+                        cell.appendChild(eventDot);
+
+                        const tooltip = document.createElement("div");
+                        tooltip.classList.add("tooltip");
+                        events[dateKey].forEach(event => {
+                            const eventInfo = document.createElement("div");
+                            eventInfo.textContent = `${event.time}: ${event.description}`;
+                            tooltip.appendChild(eventInfo);
+                        });
+
+                        cell.appendChild(tooltip);
+
+                        cell.addEventListener("mouseover", () => {
+                            tooltip.style.display = "block";
+                        });
+                        cell.addEventListener("mouseout", () => {
+                            tooltip.style.display = "none";
+                        });
+                    }
+
                     row.appendChild(cell);
                 }
                 calendarTable.appendChild(row);
