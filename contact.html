@@ -130,38 +130,31 @@
 
     <script src="newsletter.js"></script>
 
-    <!-- Add your calendar script here -->
     <script>
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        let currentDate = new Date(); // Get current date
+        let currentDate = new Date();
 
-        // Function to render the calendar for the current month
         function renderCalendar() {
             const monthDisplay = document.getElementById("month-display");
             const calendarTable = document.querySelector(".calendar tbody");
             const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
             const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
 
-            // Update month display
             monthDisplay.textContent = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
 
-            // Clear the previous calendar days
             calendarTable.innerHTML = "";
 
-            // Get the first day of the month (e.g., Sunday)
             const firstDay = firstDayOfMonth.getDay();
             const totalDaysInMonth = lastDayOfMonth.getDate();
 
             let dayCounter = 1;
             let row = document.createElement("tr");
 
-            // Create empty cells for the first week if the month doesn't start on Sunday
             for (let i = 0; i < firstDay; i++) {
                 const emptyCell = document.createElement("td");
                 row.appendChild(emptyCell);
             }
 
-            // Fill in the days of the month
             for (let i = firstDay; i < 7; i++) {
                 const cell = document.createElement("td");
                 cell.textContent = dayCounter++;
@@ -170,7 +163,6 @@
 
             calendarTable.appendChild(row);
 
-            // Create remaining rows for the days
             while (dayCounter <= totalDaysInMonth) {
                 row = document.createElement("tr");
                 for (let i = 0; i < 7; i++) {
@@ -183,7 +175,6 @@
             }
         }
 
-        // Event listeners for changing months
         document.getElementById("prev-month").addEventListener("click", () => {
             currentDate.setMonth(currentDate.getMonth() - 1);
             renderCalendar();
@@ -194,7 +185,6 @@
             renderCalendar();
         });
 
-        // Initial render
         renderCalendar();
     </script>
 </body>
