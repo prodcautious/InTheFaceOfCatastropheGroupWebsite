@@ -19,6 +19,11 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    font-family: 'Adobe Caslon Pro Regular', serif !important;
+}
+
+body p, body h1, body h2, body h3 {
+    font-size: 1.5em;
 }
 
 .opaque-image {
