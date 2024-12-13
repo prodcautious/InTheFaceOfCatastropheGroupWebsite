@@ -272,17 +272,24 @@ main p {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: auto; /* Adjust button width to fit content */
-    max-width: 100%; /* Prevent it from exceeding container width */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Keep smooth transition */
+    width: auto;
+    max-width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
 }
 
 .contact-form button:hover {
     background-color: #b77b7b;
     transform: scale(1.05);
-    transform-origin: center; /* Ensure it scales from the center */
+    transform-origin: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:active {
+    background-color: #9e5b5b;
+    transform: scale(0.98);
+    transform-origin: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .newsletter-signup {
@@ -309,7 +316,7 @@ main p {
     padding: 10px;
     font-size: 1em;
     border-radius: 4px;
-    width: 200px;  /* Match button width to input field width */
+    width: 200px;
     max-width: 100%;
 }
 
@@ -322,14 +329,25 @@ main p {
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .newsletter-signup button:hover {
-    background-color: #b77b7b;
+    background-color: #a36c6c;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.newsletter-signup button:active {
+    background-color: #9e5b5b;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .calendar-navigation {
     display: inline-flex;
