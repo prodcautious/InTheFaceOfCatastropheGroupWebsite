@@ -15,7 +15,9 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Adobe Caslon Pro Regular', serif !important;
+    font-family: 'Adobe Caslon Pro Regular', serif;
+    letter-spacing: .25px;
+    line-height: 1.65em;
 }
 
 body {
@@ -166,6 +168,7 @@ footer {
     font-weight: 300;
     font-size: 1.2em;
     line-height: 1.6em;
+    font-family: 'Hanken-Grotesk', hanken-grotesk, sans-serif;
 }
 
 .header-and-paragraph > div {

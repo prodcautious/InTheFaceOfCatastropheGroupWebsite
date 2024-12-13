@@ -59,7 +59,7 @@ header {
 }
 
 header h1, header h2 {
-    font-family: 'Adobe Caslon Pro Regular', serif !important;
+    font-family: 'Adobe Caslon Pro Regular', serif;
     margin: 0;
     text-align: left;
 }

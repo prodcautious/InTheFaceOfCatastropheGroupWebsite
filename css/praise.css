@@ -15,7 +15,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Adobe Caslon Pro Regular', serif !important;
+    font-family: 'Adobe Caslon Pro Regular', serif;
 }
 
 body {
@@ -55,6 +55,7 @@ main {
     padding-right: 40px; /* Add space between the quote and the person */
     font-style: italic; /* Differentiate quotes visually */
     color: #333; /* Adjust text color */
+    font-family: 'Hanken-Grotesk', hanken-grotesk, sans-serif;
 }
 
 .person {
