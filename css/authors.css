@@ -44,29 +44,49 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+}
+
+.caryn p, .jennifer p {
+    max-width: 60%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.caryn h3, .jennifer h3 {
+    font-size: 20px;
+}
+
+.caryn a {
+    color: #61633e;
+    transition: color 0.3s ease-in-out;
+}
+
+.caryn a:hover {
+    color: #92bb92
 }
 
 .amanda {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     gap: 20px;
+    margin-bottom: 2%;
 }
 
 .amanda-img {
-    width: 15%;
+    width: 100%;
     height: auto;
+    max-width: 250px;
 }
 
 .amanda-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 50%;
+    align-items: left;
+    text-align: left;
+    max-width: 25%;
 }
 
 header, footer {
